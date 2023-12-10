@@ -1,0 +1,81 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+
+<div class="container mt-5 col-md-12">
+  <form ngForm="form" (submit)="submit()">
+    <div class="page-header">
+      <div class="row">
+        <div class="col-sm-12">
+          <h3 class="panel-title pull-left" style="font-size: 28px">
+            Create New Product
+          </h3>
+          <button
+            type="submit"
+            id="btnSubmit"
+            class="btn btn-success pull-right"
+          >
+            <i class="fa fa-save"></i>
+            &nbsp;Save
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="con">
+      <div class="info">Basi Information</div>
+      <div class="row g-3 c">
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="name" class="control-label">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              formControlName="name"
+            />
+            <span class="text-danger"></span>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="price" class="control-label">Price</label>
+            <input type="text" class="form-control" formControlName="price" />
+            <span class="text-danger"></span>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="birthday" class="control-label">Description</label>
+            <input
+              type="text"
+              class="form-control"
+              id="birthday"
+              formControlName="description"
+            />
+            <span class="text-danger"></span>
+          </div>
+        </div>
+
+        <!-- <div class="col-md-6">
+          <div class="form-group">
+            <label for="name" class="control-label">CitizenId</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="CitizenId"
+              [(ngModel)]="service.patient.citizenId"
+              [ngModelOptions]="{ standalone: true }"
+            />
+            <span class="text-danger"></span>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <!--end div con-->
+  </form>
+</div>
+<!-- end div container-->
